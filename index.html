@@ -1,0 +1,59 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["cname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+<style>
+legend {color:brown;font-size:20;text-align:center;}
+body{font-family:TimesNewRoman;font-size:20;color:red;}
+</style>
+<link rel="manifest" href="manifest.json">
+</head><body>
+ 
+       
+  
+  <h1 style="color:red"><marquee> ONLINE RESORT BOOKING FORM</marquee></h1>
+    <div background="http://s2.jpg">
+	
+                    <br>
+                
+    <fieldset>
+    <legend>RESORT BOOKING</legend>
+	<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+    <p>Name* &emsp; &emsp; &emsp;<input type="text" name="cname" value=""></p>
+
+	<p>Gender    <input type="radio" name="gender" value="male" checked>Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other</p>
+	Current time&emsp;<button onclick="this.innerHTML=Date()">Time</button>
+	<p>City &emsp; &emsp;&emsp;&emsp;&nbsp; <input type="text" name="city" value=""></p>
+	<p>Email_id* &emsp;&emsp;&nbsp;<input type="email" name="email_id" required ></p>
+	<p>Phone number&emsp;<input type="number" name="quantity" maxlength="15"></p>
+<p>Type of Rooms required*&emsp;
+  <select name="room" required >
+      <option value="standard delux room ">standard delux room </option>
+  <option value="superior room ">superior room </option>
+  <option value="suite room">suite room</option>
+    </select></p>
+	<p>Total number of Rooms*&emsp;<input type="number" name="quantity" required></p>
+  <p>State <input type="checkbox" name="statetype" value=" tamilnadu">tamilnadu
+<input type="checkbox" name="statetype" value="Not tamilnadu ">Not tamilnadu
+<p>Total number of persons*&emsp;<input type="number" name="quantity" required></p>
+<p>Total number of adults*&emsp; &nbsp;&nbsp;<input type="number" name="quantity" required></p>
+<p>Total number of children*&emsp;<input type="number" name="quantity" required></p>
+  <p>Address &emsp;    <textarea name="message" rows="2" cols="50">
+      </textarea></p>
+ <br>
+ <input type="submit" value="submit">  
+  <input type="reset" value="Reset"> 
+    </p></fieldset>         
+</form>        
+ </div>
+<script src="home.js"></script>
+</body></html>
